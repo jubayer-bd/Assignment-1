@@ -81,8 +81,116 @@ font-family: sans-serif;
   background-color: #3333cc;
 }
 
-/* web-flow */
-.web-flow {
+/* Section Container */
+
+.action-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  padding: 60px 20px;
+}
+
+/* Content Wrapper (Text and Button) */
+.content-wrapper {
+    text-align: center; 
+    margin-bottom: 60px; 
+}
+
+/* headline h1 */
+.section-title {
+    font-size: 42px; 
+    font-weight: 700;
+    color: #252432; 
+    margin-bottom: 15px;
+}
+ 
+/* description */
+.section-description {
+    font-size: 20px; 
+    color: #252432;
+    line-height: 1.6;
+    max-width: 500px; 
+    margin: 0 auto 30px auto; 
+}
+
+/* Button Styling */
+.live-preview-button {
+    background-color: #667eea; 
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px; 
+    font-size: 1rem;
+    font-weight: 600;
+   /* extra animation in btn */
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.live-preview-button:hover {
+    background-color: #5a67d8; 
+    transform: translateY(-2px); 
+}
+
+.live-preview-button:active {
+    transform: translateY(0); 
+}
+
+/* Image Wrapper */
+.image-wrapper {
+    width: 100%;
+    max-width: 600px; 
+    overflow: hidden; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    background-color: #000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; 
+}
+
+.image-wrapper img {
+    width: 403px;
+    height: 328px;
+    display: block; 
+    border-radius: 48px; 
+    object-fit: cover; 
+}
+
+/* Responsive Design for larger screens */
+@media (min-width: 768px) {
+    .action-section {
+        flex-direction: row; 
+        justify-content: space-around;
+        align-items: center;
+        padding: 80px 60px;
+    }
+
+    .content-wrapper {
+        text-align: left; 
+        margin-right: 120px; 
+        margin-bottom: 0; 
+        flex-shrink: 0; 
+    }
+
+    .section-title {
+        font-size: 3rem; 
+    }
+
+    .section-description { 
+        margin: 0 0 30px 0;
+    }
+
+    .image-wrapper {
+        width: 50%; 
+        min-height: 400px; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-title {
+        font-size: 3.5rem; 
+    }
 }
